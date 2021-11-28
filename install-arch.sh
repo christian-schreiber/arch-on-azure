@@ -233,11 +233,11 @@ finalize() {
 
 	sed -i '/^#PermitRootLogin\s/s/.*/&\nPermitRootLogin yes/' /etc/ssh/sshd_config	
 	reflector -c Germany -a 6 --sort rate --save /etc/pacman.d/mirrorlist
-    sed -i '/# %wheel ALL=(ALL) ALL/s/^# //g' /etc/sudoers
-    useradd -m -g users -G wheel -s /bin/bash christian
-    echo "christian:Geheim!" | chpasswd
-    clear
-    neofetch
+        sed -i '/# %wheel ALL=(ALL) ALL/s/^# //g' /etc/sudoers
+        useradd -m -g users -G wheel -s /bin/bash christian
+        echo "christian:S@rt123!" | chpasswd
+        clear
+        neofetch
 
 	cat <<-EOF
 		VM has successfully been reimaged with Arch Linux.
